@@ -1,0 +1,41 @@
+﻿@model AmenityVM;
+<div class="card-body border p-4">
+
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <form method="post">
+                <div asp-validation-summary="All"></div>
+
+                <div div class="mb-2 row p-1">
+                    <label class="pb-1" asp-for="@Model.Amenity.CategoryId"></label>
+                    <select asp-for="@Model.Amenity.CategoryId" asp-items="@Model.CategoryList" class="form-control">
+                        <option disabled selected>--Select Category--</option>
+                    </select>
+                    <span asp-validation-for="@Model.Amenity.CategoryId" class="text-danger"></span>
+                </div>
+
+                <div div class="mb-2 row p-1">
+                    <label class="pb-1" asp-for="@Model.Amenity.Name"></label>
+                    <input asp-for="@Model.Amenity.Name" class=" form-control">
+                    <span asp-validation-for="@Model.Amenity.Name" class="text-danger"></span>
+                </div>
+
+                <div div class="mb-2 row p-1">
+                    <label class="pb-1" asp-for="@Model.Amenity.Description"></label>
+                    <input asp-for="@Model.Amenity.Description" class=" form-control">
+                    <span asp-validation-for="@Model.Amenity.Description" class="text-danger"></span>
+                </div>
+
+
+                <button type="submit" class="btn btn-primary">Create Amenity</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
+

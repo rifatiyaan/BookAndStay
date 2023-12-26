@@ -1,0 +1,41 @@
+﻿@model RoomNumberVM;
+<div class="card-body border p-4">
+
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <form method="post">
+                <input asp-for="Room.Room_Number" hidden />
+                <div asp-validation-summary="All"></div>
+
+                <div div class="mb-2 row p-1">
+                    <label class="pb-1" asp-for="@Model.Room.Room_Number"></label>
+                    <input asp-for="@Model.Room.Room_Number" disabled class=" form-control">
+                    <span asp-validation-for="@Model.Room.Room_Number" class="text-danger"></span>
+                </div>
+
+                <div div class="mb-2 row p-1">
+                    <label class="pb-1" asp-for="@Model.Room.Room_ID"></label>
+                    <select asp-for="@Model.Room.Room_ID" asp-items="@Model.RoomList" class="form-control">
+                        <
+                    </select>
+                    <span asp-validation-for="@Model.Room.Room_ID" class="text-danger"></span>
+                </div>
+                <div div class="mb-2 row p-1">
+                    <label class="pb-1" asp-for="@Model.Room.SpecialDetails"></label>
+                    <input asp-for="@Model.Room.SpecialDetails" class=" form-control">
+                    <span asp-validation-for="@Model.Room.SpecialDetails" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">Update</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
+
+
+
