@@ -1,4 +1,4 @@
-This is a self learning project. Project is yet to publish.
+This is a self learning project. Project is yet to be published. After publishing all the features will be documented.
 
 Project snap : 
 
