@@ -10,13 +10,11 @@ namespace BookAndStay.Domain.Entities
 
         [Key]
         public int Id { get; set; }
-        [Display(Name = "Room Type")]
 
+        [Display(Name = "Room Type")]
         [MaxLength(50)]
         public required string RoomType { get; set; }
-
         public required double Price { get; set; }
-
         public required string Description { get; set; }
         [Range(0, 10)]
         public int Occupancy { get; set; }
